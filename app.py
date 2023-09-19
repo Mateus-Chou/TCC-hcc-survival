@@ -26,7 +26,6 @@ def index():
 @app.route('/result', methods = ['POST', 'GET'])
 def result():
     if request.method == 'POST':
-        # try: 
             rcf = joblib.load('modelo_random_forest.joblib')
             sc = joblib.load('scaler.pkl')
             cols_modelo = rcf.feature_names_in_.tolist()
@@ -57,10 +56,7 @@ def result():
             shap.plots._waterfall.waterfall_legacy(expected_value=base_value, shap_values=shap_values[1][0], feature_names=cols_modelo, show=False)
             plt.savefig('static/grafico.png', bbox_inches='tight')
             plt.clf()
-            # print(clf.predict_proba(teste))
             return render_template('result.html', prob_final = probabilidade_final, df_medias = df_means, dic_nomes = dic_nomes)
-        # except:
-        #     return render_template('formulario.html', cols_bin = cols_bin, cols_float = cols_float, dic_nomes = dic_nomes, erro = True)  
     return render_template('formulario.html', cols_bin = cols_bin, cols_float = cols_float, dic_nomes = dic_nomes)
 
 
