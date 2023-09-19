@@ -55,7 +55,7 @@ def result():
 
 
             shap.plots._waterfall.waterfall_legacy(expected_value=base_value, shap_values=shap_values[1][0], feature_names=cols_modelo, show=False)
-            plt.savefig('static/caminho_para_salvar_o_grafico.png', bbox_inches='tight')
+            plt.savefig('static/grafico.png', bbox_inches='tight')
             plt.clf()
             # print(clf.predict_proba(teste))
             return render_template('result.html', prob_final = probabilidade_final, df_medias = df_means, dic_nomes = dic_nomes)
