@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Formulario de dados de saude para previsao de Diabetes</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    {%if erro%}
+    <h1> DADOS IRREGULARES </h1>
+    {%endif%}
+    <!-- forms de criacao da empresa-->
+    <form method="POST" action="/result">
+    <hr>
+    <div class= "input">
+        {%for col in cols_bin%}
+        <div>
+            <label for="{{col}}">Presença de {{dic_nomes[col]}}?</label>
+                <select name="{{col}}">
+                <option value=1>Sim</option>
+                <option value=0>Nao</option>
+            </select>
+        </div>
+        {%endfor%}
+        {% for col in cols_float %}
+        <div>
+            <label>{{dic_nomes[col]}}:</label>
+            <input type = "text" name = "{{col}}" value = 0 required> </input>
+        </div>
+        {%endfor%}
+        <div>
+            <label for="grau_ascite">Grau de ascite?</label>
+                <select name="grau_ascite">
+                <option value=1.0 >1</option>
+                <option value=2.0 >2</option>
+                <option value=3.0 >3</option>
+            </select>
+        </div>
+        <div>
+            <label for="confirmacao">Quero calcular uma probabilidade de morte do paciente. </label>
+            <input type = "checkbox" name = "confirmacao" required> </input>
+        </div>
+        <input id = 'sub-edit-btn' type="submit" class="double-check" value="Calcular" >
+    </div>
+</form>
+</body>
+</html>

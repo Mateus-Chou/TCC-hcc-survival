@@ -1,0 +1,135 @@
+:root {
+  --color-primary: #a70000;
+  --color-secondary: #000000;
+  --color-gray: #ededed;
+  --color-blue: #ff0101;
+  --color-green: #1b2823;
+  --color-accent: #b9cbcd;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+header {
+  background-color: var(--color-primary);
+  color: #fff;
+  width: 100%;
+  padding: 20px 0;
+}
+
+header img {
+  max-width: 80px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+
+table th, table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid var(--color-gray);
+}
+
+table th {
+  background-color: var(--color-blue);
+  color: #fff;
+}
+
+table td {
+  background-color: #fff;
+}
+
+table tr:hover td {
+  background-color: var(--color-green);
+  color: #fff;
+}
+
+
+a {
+  color: var(--color-primary-color-primary);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: var(--color-primary);
+}
+
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #fff;
+  background-color: var(--color-primary);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+
+hr {
+  border: none; /* remove a borda padrão */
+  height: 1px; /* define a altura da linha */
+  background-color: var(--color-primary); /* define a cor de fundo da linha */
+  margin: 20px 0; /* adiciona uma margem superior e inferior para espaçamento */
+}
+
+div {
+  margin-bottom: 10px;
+}
+
+.input input[type="text"],
+input[type="number"], select{
+  background-color: var(--color-gray);
+  border: none;
+  border-radius: 4px;
+  color: var(--color-text);
+  font-size: 16px;
+  height: 36px;
+  padding: 8px;
+  width: 100%;
+}
+
+.input label{
+padding: 7.5px;
+text-align: center;
+border: 1px solid var(--color-gray);
+background-color: var(--color-blue);
+border-radius: 10px;
+}
+
+
+
+#sub-edit-btn {
+  background-color: var(--color-secondary);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  cursor: poi
+}
+  
+
+#sub-edit-btn:hover {
+  background-color: var(--color-green);
+}
+
