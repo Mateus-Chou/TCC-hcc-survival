@@ -9,11 +9,11 @@ import matplotlib.pyplot as plt
 app = Flask(__name__)
 
 cols_float=['idade_diagnostico', 'INR', 'AFP', 'Hemoglobina', 'plaquetas', 'gama_glutamil_transferase',
-            'biliburrina_total', 'albumina', 'fosfatase_alcalina', 'maior_diametro_nodulo', 'biliburrina_direta', 'ferro', 'ferritina']
+            'biliburrina_total', 'albumina', 'fosfatase_alcalina', 'maior_diametro_nodulo', 'ferro', 'ferritina']
 cols_bin = ['sintomas','trombose_veia_porta', 'metastases_hepatica']
 dic_nomes = {"idade_diagnostico": "Idade do diagnóstico (Anos)", "INR": "Razão Normalizada Internacional", "AFP":"Alfa-Fetoproteína (ng/mL)", "Hemoglobina": "Hemoglobina (g/dL)",
             "plaquetas": "Plaquetas (G/L)", "gama_glutamil_transferase":"Gama Glutamil Transferase (U/L", "biliburrina_total" : "Bilirrubina Total (mg/dL)", 
-            "albumina": "Albumina (mg/dL)", "fosfatase_alcalina" : "Fosfatase Alcalina (U/L)", "maior_diametro_nodulo": "Tamanho do maior nódulo (cm)", "biliburrina_direta" : "Bilirrubina Direta (mg/dL)",
+            "albumina": "Albumina (mg/dL)", "fosfatase_alcalina" : "Fosfatase Alcalina (U/L)", "maior_diametro_nodulo": "Tamanho do maior nódulo (cm)",
             "ferro" : "Ferro (mcg/dL)", "ferritina" : "Ferritina (ng/mL)", "sintomas" : "sintomas", "trombose_veia_porta" : "Trombose da Veia Porta", "metastases_hepatica": "Metástase Hepática", 
             "grau_ascite_1.0" : "Grau 1 de Ascite", "grau_ascite_2.0" : "Grau 2 de Ascite", "grau_ascite_3.0" : "Grau 3 de Ascite"} 
 base_value = 0.38181818181818183
